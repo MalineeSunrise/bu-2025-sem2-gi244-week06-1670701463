@@ -13,6 +13,8 @@ public class CameraControlExam06 : MonoBehaviour
         Vector3 player1Pos = player1.transform.position;
         Vector3 player2Pos = player2.transform.position;
 
+        
+
         // Student code ...
     }
 }

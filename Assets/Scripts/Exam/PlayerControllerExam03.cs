@@ -35,9 +35,22 @@ public class PlayerControllerExam03 : MonoBehaviour
             transform.position = new Vector3(xRange, transform.position.y, transform.position.z);
         }
 
-        if (shootAction.triggered)
+        //if (shootAction.triggered)
+        //{
+        //    Instantiate(projectilePrefab, transform.position, transform.rotation);
+        //}
+
+        if (enableAutoFireMode == true)
         {
             Instantiate(projectilePrefab, transform.position, transform.rotation);
+            autoFireInterval = Time.time;
+        }
+        else
+        {
+            if (shootAction.triggered)
+            {
+                Instantiate(projectilePrefab, transform.position, transform.rotation);
+            }
         }
     }
 }
